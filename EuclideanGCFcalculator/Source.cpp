@@ -3,7 +3,6 @@
 using namespace std;
 
 int remainder(int divedend, int divisor) {
-	//copying by value first
 	for (int quantity{0}; divedend >= divisor; ++quantity) {
 		divedend += -divisor;
 	}
@@ -22,12 +21,9 @@ int GCF(int num1, int num2) {
 
 int main() {
 	cout << "Enter 2 numbers: " << endl;
-	int num1{ 1 };
-	int num2{ 1 };
+	int num1, num2{ 0 };
 	cin >> num1;
-	//cout << "Num1: " << num1 << endl << "Enter Num2:" << endl;
 	cin >> num2;
-	//cout << "Num2: " << endl;
 	cout << "The GCF of " << num1 << " and " << num2 << " is: " << GCF(num1, num2) << endl;
 
 }
