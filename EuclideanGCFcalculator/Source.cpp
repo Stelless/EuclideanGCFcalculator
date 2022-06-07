@@ -61,7 +61,7 @@ int neg_remainder(int divedend, int divisor) {
 int GCF_pos(int num1, int num2) {
 	if (num1 < num2) std::swap(num1, num2); // Make sure num1 is the bigger one
 	//cout << "Num1: " << num1 << " Num2: " << num2 << endl;
-	int r = neg_remainder(num1, num2);
+	int r = pos_remainder(num1, num2);
 	if (r == 0) { // this means one must be a factor of the other
 		return num2; // the smaller one will always be the factor of the bigger one
 	}
@@ -116,9 +116,6 @@ void test2(Stopwatch &stopwatch) {
 
 int main() {
 	cout << "Enter 2 numbers: " << endl;
-	int num1, num2{ 0 };
-	cin >> num1;
-	cin >> num2;
 	//cout << "The GCF of " << num1 << " and " << num2 << " is: " << GCF(num1, num2) << endl;
 
 
